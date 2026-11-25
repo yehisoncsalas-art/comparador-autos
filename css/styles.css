@@ -510,6 +510,31 @@ body {
 .trending-brand { font-weight: 700; font-size: 0.95rem; }
 .trending-units { font-size: 0.72rem; color: var(--text-dim); margin-top: 2px; }
 
+.trending-accordion-wrap { padding-top: 0; padding-bottom: 28px; }
+.trending-accordion {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+}
+.trending-accordion > summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text);
+  list-style: none;
+}
+.trending-accordion > summary::-webkit-details-marker { display: none; }
+.trending-accordion > summary::after { content: " ▾"; color: var(--accent-2); }
+.trending-accordion[open] > summary::after { content: " ▴"; }
+.trending-accordion .trending-section {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 14px 0 4px;
+  margin: 0;
+}
+
 /* Contenido SEO/AEO */
 .seo-content {
   background: var(--panel);
