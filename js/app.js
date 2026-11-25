@@ -1,5 +1,5 @@
 // Comparador de Autos — lógica de la app (vanilla JS, sin dependencias)
-// Catálogo: 284 modelos / 1345 versiones, fuente: catálogo público Maqui+ (referencial).
+// Catálogo: 284 modelos / 1345 versiones, referencial.
 // build: 2026-11-04b
 
 const FAVORITES_KEY = 'yc_favorites';
@@ -116,7 +116,7 @@ function updateFavCount() {
   el.favCount.textContent = state.favoriteIds.size;
 }
 
-// Tarifario Maquisistema (Maqui+), con IGV. Fuente: tabla vigente del asesor.
+// Tarifario de fondo colectivo, con IGV. Fuente: tabla vigente del asesor.
 // Auto Pronto (adelanto de 24 cuotas) — 60 meses
 const AUTO_PRONTO = [
   { cert: 12000, ins: 566.40, cuota: 259.00 },
@@ -740,7 +740,7 @@ function renderDetailModal(id) {
   ` : '';
 
   const planHtml = car.planEligible
-    ? `<span class="plan-badge">✓ Disponible en plan de ahorro Maqui+ (${car.planTypes || 'consultar'})</span>`
+    ? `<span class="plan-badge">✓ Disponible en fondo colectivo (${car.planTypes || 'consultar'})</span>`
     : '';
 
   const capHtml = capacityLabel(car)
@@ -800,7 +800,7 @@ function renderDetailModal(id) {
 
     ${similarHtml}
 
-    <p class="source-note">Catálogo referencial — fuente: catálogo público Maqui+. Precios, modelos y versiones son solo referenciales y pueden cambiar sin previo aviso. Maqui+ no vende vehículos directamente: comercializa certificados de ahorro programado que permiten acceder a un vehículo. Consulta siempre con tu asesor antes de decidir.</p>
+    <p class="source-note">Precios y modelos referenciales, sujetos a cambio. Consulta con tu asesor.</p>
   `;
 
   el.detailModal.classList.remove('hidden');
@@ -836,7 +836,7 @@ function openCompareModal() {
     { label: 'Consumo', render: c => c.specs?.consumption ? c.specs.consumption + ' L/100km' : '—' },
     { label: 'Baúl', render: c => c.specs?.trunk ? c.specs.trunk + ' L' : '—' },
     { label: 'Airbags', render: c => c.specs?.airbags || '—' },
-    { label: 'Plan Maqui+', render: c => c.planEligible ? `Sí (${c.planTypes || ''})` : 'No' },
+    { label: 'Fondo colectivo', render: c => c.planEligible ? `Sí (${c.planTypes || ''})` : 'No' },
     { label: 'Video', render: c => `<a class="video-link" href="${youtubeSearchUrl(c)}" target="_blank" rel="noopener">▶ Ver</a>` },
     { label: 'Consultar', render: c => `<a class="whatsapp-link" href="${whatsappUrl(c)}" target="_blank" rel="noopener">💬 Escríbeme</a>` },
   ];
