@@ -1,0 +1,13 @@
+# OS junk
+.DS_Store
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Dependencies
+node_modules/
+
+# Cloudflare Wrangler local state
+.wrangler/
+.dev.vars
