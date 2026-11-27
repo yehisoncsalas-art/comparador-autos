@@ -610,7 +610,7 @@ function renderGrid() {
       <div class="card-model">${car.model}</div>
       <div class="card-category">${car.category || ''} · ${car.versions.length} versión${car.versions.length === 1 ? '' : 'es'}</div>
       ${capacityLabel(car) ? `<div class="card-capacity">👨‍👩‍👧‍👦 ${capacityLabel(car)}</div>` : ''}
-      <div class="card-price">Desde ${fmtPrice(car.priceFrom)} <small>USD</small></div>
+      <div class="card-price">${car.priceFrom ? `Desde ${fmtPrice(car.priceFrom)} <small>USD</small>` : 'Consultar precio'}</div>
     `;
     card.appendChild(body);
 
@@ -703,7 +703,7 @@ function shareDetail(btn, car) {
   const url = location.href;
   const shareData = {
     title: `${car.brand} ${car.model} — Yehison Cerpa`,
-    text: `Mira el ${car.brand} ${car.model} desde ${fmtPrice(car.priceFrom)} USD en el catálogo de Yehison Cerpa.`,
+    text: `Mira el ${car.brand} ${car.model}${car.priceFrom ? ' desde ' + fmtPrice(car.priceFrom) + ' USD' : ''} en el catálogo de Yehison Cerpa.`,
     url,
   };
   trackEvent('share_car', { car_id: car.id });
@@ -779,7 +779,7 @@ function renderDetailModal(id) {
           <div class="similar-card-body">
             <div class="similar-card-brand">${s.brand}</div>
             <div class="similar-card-model">${s.model}</div>
-            <div class="similar-card-price">Desde ${fmtPrice(s.priceFrom)}</div>
+            <div class="similar-card-price">${s.priceFrom ? 'Desde ' + fmtPrice(s.priceFrom) : 'Consultar precio'}</div>
           </div>
         </div>
       `).join('')}
@@ -789,7 +789,7 @@ function renderDetailModal(id) {
   el.detailBody.innerHTML = `
     <div class="detail-header">
       <h2>${car.brand} ${car.model}</h2>
-      <p class="detail-sub">${car.category || ''} · Desde ${fmtPrice(car.priceFrom)} USD</p>
+      <p class="detail-sub">${car.category || ''} · ${car.priceFrom ? 'Desde ' + fmtPrice(car.priceFrom) + ' USD' : 'Consultar precio'}</p>
     </div>
 
     ${planHtml}

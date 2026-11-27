@@ -1,4 +1,4 @@
-// build: 2026-11-04b
+// build: 2026-11-27
 const CARS = [
   {
     "id": "byd-atto-8",
@@ -13617,6 +13617,7 @@ const CARS = [
       "seats": "Tela"
     },
     "images": [
+      "data/images/maqui-x70.jpg",
       "data/images/1mg1EA6OmxpI894EoXfxjl5JOYKTXfdaW.jpg"
     ],
     "planEligible": true,
@@ -14920,6 +14921,7 @@ const CARS = [
       "seats": "Tela"
     },
     "images": [
+      "data/images/maqui-soluto.jpg",
       "data/images/1oeu6iXzJE9V6eM3a8wcDzhJpBnoVmphP.jpg"
     ],
     "planEligible": true,
@@ -15312,6 +15314,7 @@ const CARS = [
       "seats": "Tela/Cuero"
     },
     "images": [
+      "data/images/maqui-sportage.jpg",
       "data/images/1F1lj-_dYM4SAPEIH0G0E4kANnZRFkAcS.jpg"
     ],
     "planEligible": true,
@@ -23581,6 +23584,7 @@ const CARS = [
       "seats": "Tela/Cuero"
     },
     "images": [
+      "data/images/maqui-hilux.jpg",
       "data/images/14BvUk1qUr6Nruf2dMaB69HL3JbNX9HNu.jpg"
     ],
     "planEligible": true,
@@ -23963,6 +23967,7 @@ const CARS = [
       "seats": "Tela"
     },
     "images": [
+      "data/images/maqui-rush.jpg",
       "data/images/11myNnVXZKWLenyvR3jtmJrgC0H214kCg.jpg"
     ],
     "planEligible": true,
@@ -24826,5 +24831,83 @@ const CARS = [
     "planTypes": "—",
     "priceFrom": 35990,
     "capacity": "5"
+  },
+  {
+    "id": "hyundai-h100",
+    "brand": "Hyundai",
+    "model": "H100",
+    "category": "Camión",
+    "versions": [
+      {
+        "trim": "2.5 CRDi C/S MT",
+        "year": "2026",
+        "engine": "2.5 T",
+        "transmission": "MT 6",
+        "fuel": "Diésel",
+        "traction": "4x2",
+        "bodyType": "Camión",
+        "priceList": 20000,
+        "priceFinal": 20000,
+        "promo": "",
+        "featured": false
+      }
+    ],
+    "specs": {
+      "airbags": "—",
+      "carplay": "No",
+      "screen": "—",
+      "wirelessCharge": "No",
+      "hp": "128",
+      "torque": "255",
+      "consumption": "—",
+      "trunk": "—",
+      "seats": "Tela"
+    },
+    "images": [
+      "data/images/maqui-h100.jpg"
+    ],
+    "planEligible": true,
+    "planTypes": "Todos",
+    "priceFrom": 20000,
+    "capacity": "3"
+  },
+  {
+    "id": "isuzu-serie-f",
+    "brand": "Isuzu",
+    "model": "Serie F",
+    "category": "Camión",
+    "versions": [
+      {
+        "trim": "Chasis cabina MT",
+        "year": "2026",
+        "engine": "",
+        "transmission": "MT",
+        "fuel": "Diésel",
+        "traction": "",
+        "bodyType": "Camión",
+        "priceList": null,
+        "priceFinal": null,
+        "promo": "",
+        "featured": false
+      }
+    ],
+    "specs": {
+      "airbags": "—",
+      "carplay": "No",
+      "screen": "—",
+      "wirelessCharge": "No",
+      "hp": "—",
+      "torque": "—",
+      "consumption": "—",
+      "trunk": "—",
+      "seats": "Tela"
+    },
+    "images": [
+      "data/images/maqui-isuzu.jpg"
+    ],
+    "planEligible": true,
+    "planTypes": "Todos",
+    "priceFrom": null,
+    "capacity": "3"
   }
 ];
