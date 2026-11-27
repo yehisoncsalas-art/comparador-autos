@@ -1,4 +1,4 @@
-// build: 2026-11-27
+// build: 2026-11-27b (precios nov 2026)
 const CARS = [
   {
     "id": "byd-atto-8",
@@ -617,7 +617,7 @@ const CARS = [
       "seats": "Eco cuero"
     },
     "images": [
-      "data/images/1ykmEbVXQUyMydGfDRJPT2YiDCDa6Hl82.jpg"
+      "https://lh3.googleusercontent.com/d/1tAREfKWOf3MrPW6dvwSpooQbQWMDRKcU"
     ],
     "planEligible": true,
     "planTypes": "Solo SUV",
@@ -8974,11 +8974,13 @@ const CARS = [
       "seats": "3 adultos"
     },
     "images": [
+      "data/images/maqui-h100.jpg",
       "data/images/1wvmDigagpoK5kmAolwP0LhUg-rgAc_sk.jpg"
     ],
     "planEligible": true,
     "planTypes": "Todos",
-    "priceFrom": 20990
+    "priceFrom": 20990,
+    "capacity": "3"
   },
   {
     "id": "hyundai-i20",
@@ -10712,7 +10714,7 @@ const CARS = [
       "seats": "Eco cuero"
     },
     "images": [
-      "data/images/1ykmEbVXQUyMydGfDRJPT2YiDCDa6Hl82.jpg"
+      "https://lh3.googleusercontent.com/d/1JYysn5aMqcoio5ROqxosOGs9DZ0PSlxf"
     ],
     "planEligible": true,
     "planTypes": "Solo SUV",
@@ -12062,32 +12064,6 @@ const CARS = [
     "category": "Camión",
     "versions": [
       {
-        "trim": "Chasis 3.0T",
-        "year": "2027",
-        "engine": "3.0T",
-        "transmission": "",
-        "fuel": "Gasolina",
-        "traction": "",
-        "bodyType": "Camión",
-        "priceList": 18490,
-        "priceFinal": 18490,
-        "promo": "",
-        "featured": false
-      },
-      {
-        "trim": "Baranda 3.0T",
-        "year": "2027",
-        "engine": "3.0T",
-        "transmission": "",
-        "fuel": "Gasolina",
-        "traction": "",
-        "bodyType": "Camión",
-        "priceList": 19490,
-        "priceFinal": 19490,
-        "promo": "",
-        "featured": false
-      },
-      {
         "trim": "Chasis 3.0 Tn",
         "year": "2026",
         "engine": "3.0L",
@@ -12109,7 +12085,7 @@ const CARS = [
         "traction": "",
         "bodyType": "Camión",
         "priceList": 18990,
-        "priceFinal": 18990,
+        "priceFinal": 18790,
         "promo": "",
         "featured": false
       },
@@ -12122,7 +12098,7 @@ const CARS = [
         "traction": "",
         "bodyType": "Camión",
         "priceList": 19990,
-        "priceFinal": 19990,
+        "priceFinal": 19790,
         "promo": "",
         "featured": false
       }
@@ -12152,7 +12128,7 @@ const CARS = [
     "category": "Camión",
     "versions": [
       {
-        "trim": "Chasis 4.0T",
+        "trim": "Chasis 4.0 Tn",
         "year": "2026",
         "engine": "4.0T",
         "transmission": "",
@@ -12165,19 +12141,6 @@ const CARS = [
         "featured": false
       },
       {
-        "trim": "Baranda 4.0T",
-        "year": "2027",
-        "engine": "4.0T",
-        "transmission": "",
-        "fuel": "Gasolina",
-        "traction": "",
-        "bodyType": "Camión",
-        "priceList": 21490,
-        "priceFinal": 21490,
-        "promo": "",
-        "featured": false
-      },
-      {
         "trim": "Baranda 4.0 Tn",
         "year": "2026",
         "engine": "4.0L",
@@ -12186,7 +12149,7 @@ const CARS = [
         "traction": "",
         "bodyType": "Camión",
         "priceList": 21990,
-        "priceFinal": 21490,
+        "priceFinal": 21340,
         "promo": "Arribo segunda quincena septiembre",
         "featured": false
       },
@@ -12199,7 +12162,7 @@ const CARS = [
         "traction": "",
         "bodyType": "Camión",
         "priceList": 20990,
-        "priceFinal": 20990,
+        "priceFinal": 20840,
         "promo": "",
         "featured": false
       },
@@ -12212,7 +12175,7 @@ const CARS = [
         "traction": "",
         "bodyType": "Camión",
         "priceList": 21990,
-        "priceFinal": 21990,
+        "priceFinal": 21840,
         "promo": "",
         "featured": false
       }
@@ -12241,32 +12204,6 @@ const CARS = [
     "model": "JAC D400 DC",
     "category": "Camión",
     "versions": [
-      {
-        "trim": "Chasis 4.0T",
-        "year": "2027",
-        "engine": "4.0T",
-        "transmission": "",
-        "fuel": "Gasolina",
-        "traction": "",
-        "bodyType": "Camión",
-        "priceList": 23190,
-        "priceFinal": 23190,
-        "promo": "",
-        "featured": false
-      },
-      {
-        "trim": "Baranda 4.0T",
-        "year": "2027",
-        "engine": "4.0T",
-        "transmission": "",
-        "fuel": "Gasolina",
-        "traction": "",
-        "bodyType": "Camión",
-        "priceList": 23990,
-        "priceFinal": 23990,
-        "promo": "",
-        "featured": false
-      },
       {
         "trim": "Chasis 4.0 Tn",
         "year": "2027",
@@ -12318,32 +12255,6 @@ const CARS = [
     "model": "JAC D700",
     "category": "Camión",
     "versions": [
-      {
-        "trim": "Chasis 7.0T",
-        "year": "2027",
-        "engine": "7.0T",
-        "transmission": "",
-        "fuel": "Gasolina",
-        "traction": "",
-        "bodyType": "Camión",
-        "priceList": 27990,
-        "priceFinal": 27990,
-        "promo": "",
-        "featured": false
-      },
-      {
-        "trim": "Baranda 7.0T",
-        "year": "2027",
-        "engine": "7.0T",
-        "transmission": "",
-        "fuel": "Gasolina",
-        "traction": "",
-        "bodyType": "Camión",
-        "priceList": 28490,
-        "priceFinal": 28490,
-        "promo": "",
-        "featured": false
-      },
       {
         "trim": "Chasis 7.0 Tn",
         "year": "2026",
@@ -12409,19 +12320,6 @@ const CARS = [
     "category": "Camión",
     "versions": [
       {
-        "trim": "Chasis 10.8T 180HP",
-        "year": "2027",
-        "engine": "10.8T",
-        "transmission": "",
-        "fuel": "Gasolina",
-        "traction": "",
-        "bodyType": "Camión",
-        "priceList": 40490,
-        "priceFinal": 40490,
-        "promo": "",
-        "featured": false
-      },
-      {
         "trim": "Chasis 10.8 Tn - 180 HP",
         "year": "2027",
         "engine": "10.8T",
@@ -12451,7 +12349,7 @@ const CARS = [
     ],
     "planEligible": null,
     "planTypes": null,
-    "priceFrom": 40490
+    "priceFrom": 41490
   },
   {
     "id": "jac-camiones-jac-hfc1161",
@@ -12468,7 +12366,7 @@ const CARS = [
         "traction": "",
         "bodyType": "Camión",
         "priceList": 51990,
-        "priceFinal": 50990,
+        "priceFinal": 50490,
         "promo": "",
         "featured": false
       }
@@ -12489,7 +12387,7 @@ const CARS = [
     ],
     "planEligible": null,
     "planTypes": null,
-    "priceFrom": 50990
+    "priceFrom": 50490
   },
   {
     "id": "jac-camiones-jac-hfc1251",
@@ -12544,7 +12442,7 @@ const CARS = [
         "traction": "",
         "bodyType": "Camión",
         "priceList": 88990,
-        "priceFinal": 79990,
+        "priceFinal": 79490,
         "promo": "",
         "featured": false
       }
@@ -12565,7 +12463,7 @@ const CARS = [
     ],
     "planEligible": null,
     "planTypes": null,
-    "priceFrom": 79990
+    "priceFrom": 79490
   },
   {
     "id": "jac-camiones-jac-hfc3252",
@@ -12582,7 +12480,7 @@ const CARS = [
         "traction": "",
         "bodyType": "Camión",
         "priceList": 89990,
-        "priceFinal": 79990,
+        "priceFinal": 78990,
         "promo": "",
         "featured": false
       },
@@ -12595,7 +12493,7 @@ const CARS = [
         "traction": "",
         "bodyType": "Camión",
         "priceList": 92990,
-        "priceFinal": 83990,
+        "priceFinal": 83490,
         "promo": "",
         "featured": false
       }
@@ -12616,7 +12514,7 @@ const CARS = [
     ],
     "planEligible": null,
     "planTypes": null,
-    "priceFrom": 79990
+    "priceFrom": 78990
   },
   {
     "id": "jac-camiones-jac-hfc5251",
@@ -12633,7 +12531,7 @@ const CARS = [
         "traction": "",
         "bodyType": "Camión",
         "priceList": 84990,
-        "priceFinal": 81990,
+        "priceFinal": 81490,
         "promo": "",
         "featured": false
       }
@@ -12654,7 +12552,7 @@ const CARS = [
     ],
     "planEligible": null,
     "planTypes": null,
-    "priceFrom": 81990
+    "priceFrom": 81490
   },
   {
     "id": "jac-camiones-jac-k7",
@@ -12662,19 +12560,6 @@ const CARS = [
     "model": "JAC K7",
     "category": "Camión",
     "versions": [
-      {
-        "trim": "MT DUAL 48T",
-        "year": "2027",
-        "engine": "48T",
-        "transmission": "MT",
-        "fuel": "Gasolina",
-        "traction": "",
-        "bodyType": "Camión",
-        "priceList": 92990,
-        "priceFinal": 92990,
-        "promo": "",
-        "featured": false
-      },
       {
         "trim": "AMT DUAL i=3.70 Chasis 48 Tn",
         "year": "2025",
@@ -12684,7 +12569,7 @@ const CARS = [
         "traction": "",
         "bodyType": "Camión",
         "priceList": 94990,
-        "priceFinal": 89990,
+        "priceFinal": 88990,
         "promo": "",
         "featured": false
       },
@@ -12697,7 +12582,7 @@ const CARS = [
         "traction": "",
         "bodyType": "Camión",
         "priceList": 94990,
-        "priceFinal": 89990,
+        "priceFinal": 88990,
         "promo": "",
         "featured": false
       },
@@ -12757,7 +12642,7 @@ const CARS = [
     ],
     "planEligible": null,
     "planTypes": null,
-    "priceFrom": 89990
+    "priceFrom": 88990
   },
   {
     "id": "jac-camiones-jac-n55e",
@@ -12774,7 +12659,7 @@ const CARS = [
         "traction": "",
         "bodyType": "Camión",
         "priceList": 51990,
-        "priceFinal": 45990,
+        "priceFinal": 44990,
         "promo": "",
         "featured": false
       },
@@ -12787,8 +12672,8 @@ const CARS = [
         "traction": "",
         "bodyType": "Camión",
         "priceList": 69990,
-        "priceFinal": 46990,
-        "promo": "Precios de REMATE",
+        "priceFinal": 45990,
+        "promo": "de REMATE",
         "featured": false
       }
     ],
@@ -12808,7 +12693,7 @@ const CARS = [
     ],
     "planEligible": null,
     "planTypes": null,
-    "priceFrom": 45990
+    "priceFrom": 44990
   },
   {
     "id": "jac-camiones-jac-n75",
@@ -12825,7 +12710,7 @@ const CARS = [
         "traction": "",
         "bodyType": "Camión",
         "priceList": 69990,
-        "priceFinal": 56990,
+        "priceFinal": 55990,
         "promo": "",
         "featured": false
       }
@@ -12846,7 +12731,7 @@ const CARS = [
     ],
     "planEligible": null,
     "planTypes": null,
-    "priceFrom": 56990
+    "priceFrom": 55990
   },
   {
     "id": "jac-camiones-jac-q7",
@@ -12892,32 +12777,6 @@ const CARS = [
     "model": "JAC SD400",
     "category": "Camión",
     "versions": [
-      {
-        "trim": "Chasis 5.0T",
-        "year": "2027",
-        "engine": "5.0T",
-        "transmission": "",
-        "fuel": "Gasolina",
-        "traction": "",
-        "bodyType": "Camión",
-        "priceList": 25490,
-        "priceFinal": 25490,
-        "promo": "",
-        "featured": false
-      },
-      {
-        "trim": "Baranda 5.0T",
-        "year": "2027",
-        "engine": "5.0T",
-        "transmission": "",
-        "fuel": "Gasolina",
-        "traction": "",
-        "bodyType": "Camión",
-        "priceList": 25990,
-        "priceFinal": 25990,
-        "promo": "",
-        "featured": false
-      },
       {
         "trim": "Chasis 5.0 Tn",
         "year": "2027",
@@ -12969,32 +12828,6 @@ const CARS = [
     "model": "JAC SD500",
     "category": "Camión",
     "versions": [
-      {
-        "trim": "Chasis 6.0T",
-        "year": "2027",
-        "engine": "6.0T",
-        "transmission": "",
-        "fuel": "Gasolina",
-        "traction": "",
-        "bodyType": "Camión",
-        "priceList": 26990,
-        "priceFinal": 26990,
-        "promo": "",
-        "featured": false
-      },
-      {
-        "trim": "Baranda 6.0T",
-        "year": "2027",
-        "engine": "6.0T",
-        "transmission": "",
-        "fuel": "Gasolina",
-        "traction": "",
-        "bodyType": "Camión",
-        "priceList": 27490,
-        "priceFinal": 27490,
-        "promo": "",
-        "featured": false
-      },
       {
         "trim": "Chasis 6.0 Tn",
         "year": "2026",
@@ -13072,32 +12905,6 @@ const CARS = [
     "model": "JAC SD800",
     "category": "Camión",
     "versions": [
-      {
-        "trim": "Chasis 9.0T",
-        "year": "2027",
-        "engine": "9.0T",
-        "transmission": "",
-        "fuel": "Gasolina",
-        "traction": "",
-        "bodyType": "Camión",
-        "priceList": 30990,
-        "priceFinal": 30990,
-        "promo": "",
-        "featured": false
-      },
-      {
-        "trim": "Baranda 9.0T",
-        "year": "2027",
-        "engine": "9.0T",
-        "transmission": "",
-        "fuel": "Gasolina",
-        "traction": "",
-        "bodyType": "Camión",
-        "priceList": 31990,
-        "priceFinal": 31990,
-        "promo": "",
-        "featured": false
-      },
       {
         "trim": "Chasis 9.0 Tn",
         "year": "2027",
@@ -13618,6 +13425,7 @@ const CARS = [
     },
     "images": [
       "data/images/maqui-x70.jpg",
+      "https://lh3.googleusercontent.com/d/1ofr7_lHltuovkE9Lwl3HmaPVj-rLs3t_",
       "data/images/1mg1EA6OmxpI894EoXfxjl5JOYKTXfdaW.jpg"
     ],
     "planEligible": true,
@@ -13890,7 +13698,7 @@ const CARS = [
         "traction": "4x2",
         "bodyType": "Pickup",
         "priceList": 23990,
-        "priceFinal": 19990,
+        "priceFinal": 20490,
         "promo": "",
         "featured": false
       },
@@ -13946,11 +13754,11 @@ const CARS = [
       "seats": "Tela"
     },
     "images": [
-      "data/images/1-Qu2ktjN6bClHNSZkhOdKXzWcf3hm755.jpg"
+      "https://lh3.googleusercontent.com/d/1Frb7OsrYW5sIWiccNMrER9US35FlpNnj"
     ],
     "planEligible": true,
     "planTypes": "Todos",
-    "priceFrom": 19990
+    "priceFrom": 20490
   },
   {
     "id": "kia-k3",
@@ -14231,7 +14039,7 @@ const CARS = [
       "seats": "Tela/Cuero"
     },
     "images": [
-      "data/images/1-Qu2ktjN6bClHNSZkhOdKXzWcf3hm755.jpg"
+      "https://lh3.googleusercontent.com/d/1JZj7JmBxPitccZbVyUb8QhKgiUWYxEKE"
     ],
     "planEligible": true,
     "planTypes": "Todos",
@@ -14360,7 +14168,7 @@ const CARS = [
       "seats": "Tela/Cuero"
     },
     "images": [
-      "data/images/1mg1EA6OmxpI894EoXfxjl5JOYKTXfdaW.jpg"
+      "https://lh3.googleusercontent.com/d/1Kx6SaPlT4HeAiPve8xIPMxVMHMhbXJJe"
     ],
     "planEligible": true,
     "planTypes": "Todos",
@@ -14692,6 +14500,71 @@ const CARS = [
     "planEligible": true,
     "planTypes": "Todos",
     "priceFrom": 17490,
+    "capacity": "5"
+  },
+  {
+    "id": "kia-seltos-sp3",
+    "brand": "KIA",
+    "model": "Seltos SP3",
+    "category": "SUV",
+    "versions": [
+      {
+        "trim": "1.5 CVT EX SPORT New",
+        "year": "2027",
+        "engine": "1.5L",
+        "transmission": "Automático",
+        "fuel": "Gasolina",
+        "traction": "",
+        "bodyType": "SUV",
+        "priceList": 29990,
+        "priceFinal": 27990,
+        "promo": "",
+        "featured": false
+      },
+      {
+        "trim": "1.5 CVT LX PLUS",
+        "year": "2027",
+        "engine": "1.5L",
+        "transmission": "Automático",
+        "fuel": "Gasolina",
+        "traction": "",
+        "bodyType": "SUV",
+        "priceList": 26990,
+        "priceFinal": 23990,
+        "promo": "",
+        "featured": false
+      },
+      {
+        "trim": "1.5 MT LX PLUS",
+        "year": "2027",
+        "engine": "1.5L",
+        "transmission": "Manual",
+        "fuel": "Gasolina",
+        "traction": "",
+        "bodyType": "SUV",
+        "priceList": 25490,
+        "priceFinal": 22490,
+        "promo": "",
+        "featured": false
+      }
+    ],
+    "specs": {
+      "airbags": "6",
+      "carplay": "Sí",
+      "screen": "10.25\"",
+      "wirelessCharge": "Sí",
+      "hp": "146",
+      "torque": "179",
+      "consumption": "7",
+      "trunk": "498",
+      "seats": "Tela/Cuero"
+    },
+    "images": [
+      "https://lh3.googleusercontent.com/d/1Sfz1WQH0MRJGYkDa07XlX7bEz6BFAIx-"
+    ],
+    "planEligible": true,
+    "planTypes": "Todos",
+    "priceFrom": 22490,
     "capacity": "5"
   },
   {
@@ -15586,6 +15459,19 @@ const CARS = [
         "priceList": 66990,
         "priceFinal": 64990,
         "promo": "Mantenimiento gratuito: 2 Años ó 20K kms.",
+        "featured": false
+      },
+      {
+        "trim": "2.2 AT 4WD DIESEL D/C LX SPORT - NEUMATICOS A/T New",
+        "year": "2027",
+        "engine": "2.2L",
+        "transmission": "Automático",
+        "fuel": "Diésel",
+        "traction": "4x4",
+        "bodyType": "Pickup",
+        "priceList": 47990,
+        "priceFinal": 40990,
+        "promo": "",
         "featured": false
       }
     ],
@@ -17216,7 +17102,7 @@ const CARS = [
         "traction": "4x4",
         "bodyType": "Coupé",
         "priceList": 89990,
-        "priceFinal": 89990,
+        "priceFinal": 82990,
         "promo": "Edición especial (a pedido +3 meses)",
         "featured": false
       }
@@ -17237,7 +17123,7 @@ const CARS = [
     ],
     "planEligible": null,
     "planTypes": null,
-    "priceFrom": 89990
+    "priceFrom": 82990
   },
   {
     "id": "mg-mg-rx9",
@@ -17254,7 +17140,7 @@ const CARS = [
         "traction": "FWD",
         "bodyType": "SUV",
         "priceList": 34990,
-        "priceFinal": 34990,
+        "priceFinal": 31990,
         "promo": "",
         "featured": false
       },
@@ -17267,7 +17153,7 @@ const CARS = [
         "traction": "4WD",
         "bodyType": "SUV",
         "priceList": 36990,
-        "priceFinal": 36990,
+        "priceFinal": 33990,
         "promo": "",
         "featured": false
       }
@@ -17288,7 +17174,7 @@ const CARS = [
     ],
     "planEligible": null,
     "planTypes": null,
-    "priceFrom": 34990,
+    "priceFrom": 31990,
     "capacity": "5"
   },
   {
@@ -17306,7 +17192,7 @@ const CARS = [
         "traction": "FWD",
         "bodyType": "SUV",
         "priceList": 21490,
-        "priceFinal": 21490,
+        "priceFinal": 19990,
         "promo": "",
         "featured": false
       },
@@ -17319,7 +17205,7 @@ const CARS = [
         "traction": "FWD",
         "bodyType": "SUV",
         "priceList": 22490,
-        "priceFinal": 22490,
+        "priceFinal": 20990,
         "promo": "",
         "featured": false
       },
@@ -17332,7 +17218,7 @@ const CARS = [
         "traction": "FWD",
         "bodyType": "SUV",
         "priceList": 25990,
-        "priceFinal": 25990,
+        "priceFinal": 22990,
         "promo": "",
         "featured": false
       },
@@ -17345,7 +17231,7 @@ const CARS = [
         "traction": "FWD",
         "bodyType": "SUV",
         "priceList": 27990,
-        "priceFinal": 27990,
+        "priceFinal": 24990,
         "promo": "",
         "featured": false
       },
@@ -17358,7 +17244,7 @@ const CARS = [
         "traction": "FWD",
         "bodyType": "SUV",
         "priceList": 23290,
-        "priceFinal": 23290,
+        "priceFinal": 21790,
         "promo": "",
         "featured": false
       },
@@ -17371,7 +17257,7 @@ const CARS = [
         "traction": "FWD",
         "bodyType": "SUV",
         "priceList": 23490,
-        "priceFinal": 23490,
+        "priceFinal": 21990,
         "promo": "",
         "featured": false
       },
@@ -17384,7 +17270,7 @@ const CARS = [
         "traction": "FWD",
         "bodyType": "SUV",
         "priceList": 22290,
-        "priceFinal": 22290,
+        "priceFinal": 20790,
         "promo": "",
         "featured": false
       },
@@ -17397,7 +17283,7 @@ const CARS = [
         "traction": "FWD",
         "bodyType": "SUV",
         "priceList": 22490,
-        "priceFinal": 22490,
+        "priceFinal": 20990,
         "promo": "",
         "featured": false
       }
@@ -17418,7 +17304,7 @@ const CARS = [
     ],
     "planEligible": null,
     "planTypes": null,
-    "priceFrom": 21490,
+    "priceFrom": 19990,
     "capacity": "5"
   },
   {
@@ -17436,7 +17322,7 @@ const CARS = [
         "traction": "FWD",
         "bodyType": "SUV",
         "priceList": 15490,
-        "priceFinal": 15490,
+        "priceFinal": 14490,
         "promo": "",
         "featured": false
       },
@@ -17449,7 +17335,7 @@ const CARS = [
         "traction": "FWD",
         "bodyType": "SUV",
         "priceList": 16490,
-        "priceFinal": 16490,
+        "priceFinal": 15290,
         "promo": "",
         "featured": false
       },
@@ -17462,7 +17348,7 @@ const CARS = [
         "traction": "FWD",
         "bodyType": "SUV",
         "priceList": 16690,
-        "priceFinal": 16690,
+        "priceFinal": 15490,
         "promo": "",
         "featured": false
       },
@@ -17475,7 +17361,7 @@ const CARS = [
         "traction": "FWD",
         "bodyType": "SUV",
         "priceList": 16690,
-        "priceFinal": 16690,
+        "priceFinal": 15490,
         "promo": "",
         "featured": false
       },
@@ -17488,7 +17374,7 @@ const CARS = [
         "traction": "FWD",
         "bodyType": "SUV",
         "priceList": 17690,
-        "priceFinal": 17690,
+        "priceFinal": 16290,
         "promo": "",
         "featured": false
       },
@@ -17501,7 +17387,7 @@ const CARS = [
         "traction": "FWD",
         "bodyType": "SUV",
         "priceList": 18590,
-        "priceFinal": 18590,
+        "priceFinal": 16590,
         "promo": "",
         "featured": false
       },
@@ -17514,7 +17400,7 @@ const CARS = [
         "traction": "FWD",
         "bodyType": "SUV",
         "priceList": 19190,
-        "priceFinal": 19190,
+        "priceFinal": 17190,
         "promo": "",
         "featured": false
       },
@@ -17527,7 +17413,7 @@ const CARS = [
         "traction": "FWD",
         "bodyType": "SUV",
         "priceList": 19790,
-        "priceFinal": 19790,
+        "priceFinal": 17590,
         "promo": "",
         "featured": false
       },
@@ -17540,7 +17426,7 @@ const CARS = [
         "traction": "FWD",
         "bodyType": "SUV",
         "priceList": 20390,
-        "priceFinal": 20390,
+        "priceFinal": 18190,
         "promo": "",
         "featured": false
       },
@@ -17553,7 +17439,7 @@ const CARS = [
         "traction": "FWD",
         "bodyType": "SUV",
         "priceList": 17890,
-        "priceFinal": 17890,
+        "priceFinal": 16490,
         "promo": "",
         "featured": false
       },
@@ -17566,7 +17452,7 @@ const CARS = [
         "traction": "FWD",
         "bodyType": "SUV",
         "priceList": 19190,
-        "priceFinal": 19190,
+        "priceFinal": 17190,
         "promo": "",
         "featured": false
       },
@@ -17579,7 +17465,7 @@ const CARS = [
         "traction": "FWD",
         "bodyType": "SUV",
         "priceList": 20390,
-        "priceFinal": 20390,
+        "priceFinal": 18190,
         "promo": "",
         "featured": false
       }
@@ -17600,7 +17486,7 @@ const CARS = [
     ],
     "planEligible": null,
     "planTypes": null,
-    "priceFrom": 15490,
+    "priceFrom": 14490,
     "capacity": "5"
   },
   {
@@ -17618,7 +17504,7 @@ const CARS = [
         "traction": "FWD",
         "bodyType": "Sedán",
         "priceList": 13790,
-        "priceFinal": 13790,
+        "priceFinal": 12990,
         "promo": "",
         "featured": false
       },
@@ -17631,7 +17517,7 @@ const CARS = [
         "traction": "FWD",
         "bodyType": "Sedán",
         "priceList": 14190,
-        "priceFinal": 14190,
+        "priceFinal": 12990,
         "promo": "",
         "featured": false
       },
@@ -17644,7 +17530,7 @@ const CARS = [
         "traction": "FWD",
         "bodyType": "Sedán",
         "priceList": 14290,
-        "priceFinal": 14290,
+        "priceFinal": 12990,
         "promo": "",
         "featured": false
       }
@@ -17665,7 +17551,7 @@ const CARS = [
     ],
     "planEligible": null,
     "planTypes": null,
-    "priceFrom": 13790
+    "priceFrom": 12990
   },
   {
     "id": "mitsubishi-asx",
@@ -20396,7 +20282,7 @@ const CARS = [
       "seats": "7 adultos"
     },
     "images": [
-      "data/images/1tpkzy_xlBhT7NGGJJFTTZM_F8zzSFjLO.jpg"
+      "https://lh3.googleusercontent.com/d/1j3rAVIUZo5ULpvNjcUSAxIqmjq9Bsd4_"
     ],
     "planEligible": null,
     "planTypes": null,
@@ -20435,7 +20321,7 @@ const CARS = [
       "seats": "7 adultos"
     },
     "images": [
-      "data/images/1tpkzy_xlBhT7NGGJJFTTZM_F8zzSFjLO.jpg"
+      "https://lh3.googleusercontent.com/d/1IIbo30N5thxrO8Z8SbRqt9bmlt1_mt5Q"
     ],
     "planEligible": null,
     "planTypes": null,
@@ -21552,7 +21438,7 @@ const CARS = [
       "seats": "5 adultos"
     },
     "images": [
-      "data/images/1abWkJk3rGoyOnMOmVirGLsc5eXXiBfha.jpg"
+      "https://lh3.googleusercontent.com/d/1l6Nv6Aa1md6qI9nJopTMSfM131RQPJqY"
     ],
     "planEligible": true,
     "planTypes": "Todos",
@@ -23124,7 +23010,7 @@ const CARS = [
       "seats": "5 adultos"
     },
     "images": [
-      "data/images/1abWkJk3rGoyOnMOmVirGLsc5eXXiBfha.jpg"
+      "https://lh3.googleusercontent.com/d/1Rer2FA7tCKDBJQHH28s2wrfgBYygmTcl"
     ],
     "planEligible": true,
     "planTypes": "Todos",
@@ -24831,45 +24717,6 @@ const CARS = [
     "planTypes": "—",
     "priceFrom": 35990,
     "capacity": "5"
-  },
-  {
-    "id": "hyundai-h100",
-    "brand": "Hyundai",
-    "model": "H100",
-    "category": "Camión",
-    "versions": [
-      {
-        "trim": "2.5 CRDi C/S MT",
-        "year": "2026",
-        "engine": "2.5 T",
-        "transmission": "MT 6",
-        "fuel": "Diésel",
-        "traction": "4x2",
-        "bodyType": "Camión",
-        "priceList": 20000,
-        "priceFinal": 20000,
-        "promo": "",
-        "featured": false
-      }
-    ],
-    "specs": {
-      "airbags": "—",
-      "carplay": "No",
-      "screen": "—",
-      "wirelessCharge": "No",
-      "hp": "128",
-      "torque": "255",
-      "consumption": "—",
-      "trunk": "—",
-      "seats": "Tela"
-    },
-    "images": [
-      "data/images/maqui-h100.jpg"
-    ],
-    "planEligible": true,
-    "planTypes": "Todos",
-    "priceFrom": 20000,
-    "capacity": "3"
   },
   {
     "id": "isuzu-serie-f",
