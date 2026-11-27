@@ -8,7 +8,7 @@ URL de prueba prevista: https://yehisoncerpa.pages.dev
 
 El formulario llama a `/api/lead`. Esa función reenvía los datos a la variable de entorno **`LEAD_WEBHOOK_URL`**.
 
-Mientras esa variable no esté definida, el visitante **no** verá un "Gracias" falso: verá un mensaje honesto con el botón **Llámame al 931 892 164**.
+Mientras esa variable no esté definida, el visitante **no** verá un "Gracias" falso: verá un mensaje honesto con un botón para **enviar sus datos por WhatsApp al 983 311 727** (ya van escritos nombre, celular, auto y cuota).
 
 ### 1. Crear el Google Apps Script (tú lo haces en tu cuenta de Google)
 
@@ -66,4 +66,18 @@ Después de eso, un envío de prueba del formulario debería aparecer como una f
 
 ## Repositorio
 
-El sitio es estático. Está desplegado en el proyecto de Cloudflare Pages "yehisoncerpa" (https://yehisoncerpa.pages.dev) y, por ahora, se sube a mano.
+El sitio es estático. Está desplegado en el proyecto de Cloudflare Pages "yehisoncerpa" (https://yehisoncerpa.pages.dev).
+
+### Publicar desde GitHub (recomendado)
+
+Subir la carpeta a mano deja fuera la función `functions/api/lead.js` (por eso el formulario respondía 405) y hace que la página publicada y este repositorio se desincronicen. Para que cada cambio en `main` se publique solo:
+
+1. Cloudflare → **Workers & Pages → Create → Pages → Connect to Git**.
+2. Autoriza GitHub y elige `yehisoncsalas-art/comparador-autos`, rama `main`.
+3. Framework preset: **None**. Build command: vacío. Build output directory: `/`.
+4. Agrega la variable `LEAD_WEBHOOK_URL` (ver arriba) y pulsa **Save and Deploy**.
+5. Cuando funcione, en el proyecto nuevo → **Custom domains** apunta `yehisoncerpa.pages.dev` o tu dominio propio, y borra el proyecto viejo de subida manual.
+
+### Dominio propio (opcional, recomendado antes de invertir en SEO)
+
+Compra un dominio (p. ej. `yehisoncerpa.com` en Cloudflare Registrar) y agrégalo en **Custom domains**. Luego cambia `https://yehisoncerpa.pages.dev` por el dominio nuevo en `sitemap.xml`, `robots.txt` y en las etiquetas `canonical` y `og:url` de cada página.

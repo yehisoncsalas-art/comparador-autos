@@ -401,3 +401,9 @@ select:focus,input:focus{border-color:var(--c-gold)}
   .content-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
   .article-page{padding:28px 0 40px}
 }
+
+/* WhatsApp como acción principal */
+.btn-wa{background:#25D366;border-color:#25D366;color:#06310F}
+.btn-wa:hover{background:#3BE07A;border-color:#3BE07A;color:#06310F}
+.btn-wa .ico{width:20px;height:20px}
+.lead-error .btn-wa,.lead-error a.btn-wa{margin-top:10px;color:#06310F}

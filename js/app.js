@@ -8,7 +8,7 @@ const FAVORITES_KEY = 'yc_favorites';
 const state = {
   filteredCars: [...CARS],
   compareIds: [],
-  sortBy: 'brand',
+  sortBy: 'popular',
   favoriteIds: new Set(loadFavorites()),
   showFavoritesOnly: false,
   visibleCount: 24,
@@ -179,6 +179,7 @@ function switchCalcTab(plan) {
   el.calcGridTardio.classList.toggle('hidden', isPronto);
   el.calcResultPronto.classList.add('hidden');
   el.calcResultTardio.classList.add('hidden');
+  if (isPronto) calculatePronto(true); else calculateTardio(true);
 }
 
 function calcularAutoPronto(row) {
@@ -202,7 +203,7 @@ function calcularIngresoTardio(row, entradaCliente) {
   return { ok: true, obligacion, cuotaProrrateada, remate, saldo, reducirCuota, reducirPlazo };
 }
 
-function calculatePronto() {
+function calculatePronto(silent) {
   const row = pickCert(AUTO_PRONTO, el.calcCertPronto.value);
   const r = calcularAutoPronto(row);
 
@@ -213,17 +214,17 @@ function calculatePronto() {
   el.calcResultPronto.classList.remove('hidden');
   el.calcResultTardio.classList.add('hidden');
 
-  const msg = `Hola Yehison, simulé el plan "Adelanto de 24 cuotas" para un certificado de ${fmtPrice(row.cert)}: entrada ${fmtMoney2(r.entrada)} y cuota de ${fmtMoney2(r.cuota)}/mes. ¿Me ayudas a confirmar los detalles?`;
+  const msg = `Hola Yehison, simulé el plan "Paga ~55% y llévate tu auto" (adelanto de 24 cuotas) para un certificado de ${fmtPrice(row.cert)}: entrada ${fmtMoney2(r.entrada)} y cuota de ${fmtMoney2(r.cuota)}/mes. ¿Me ayudas a confirmar los detalles?`;
   el.prontoWhatsappBtn.href = `https://wa.me/51983311727?text=${encodeURIComponent(msg)}`;
 
-  el.leadAutoInteres.value = `Adelanto de 24 cuotas — certificado ${fmtPrice(row.cert)}`;
+  el.leadAutoInteres.value = `Paga ~55% (adelanto de 24 cuotas) — certificado ${fmtPrice(row.cert)}`;
   el.leadCuotaEstimada.value = fmtMoney2(r.cuota) + '/mes';
 
-  trackEvent('calculate_quote', { plan: 'auto_pronto', certificado: row.cert, cuota: r.cuota });
-  el.calcResultPronto.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  if (!silent) trackEvent('calculate_quote', { plan: 'auto_pronto', certificado: row.cert, cuota: r.cuota });
+  if (!silent) el.calcResultPronto.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
-function calculateTardio() {
+function calculateTardio(silent) {
   const row = pickCert(AUTO_AHORRO, el.calcCertTardio.value);
   const entradaCliente = Number(el.calcEntradaTardio.value) || 0;
   const r = calcularIngresoTardio(row, entradaCliente);
@@ -235,8 +236,8 @@ function calculateTardio() {
     el.tardioNotEnough.classList.remove('hidden');
     el.tardioMinEntrada.textContent = fmtMoney2(r.minEntrada);
     el.tardioResultsBox.classList.add('hidden');
-    trackEvent('calculate_quote', { plan: 'ingreso_tardio', certificado: row.cert, result: 'insufficient_entrada' });
-    el.calcResultTardio.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    if (!silent) trackEvent('calculate_quote', { plan: 'ingreso_tardio', certificado: row.cert, result: 'insufficient_entrada' });
+    if (!silent) el.calcResultTardio.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     return;
   }
 
@@ -249,14 +250,14 @@ function calculateTardio() {
   el.tardioCuotasPlazo.textContent = Math.ceil(r.reducirPlazo.cuotas);
   el.tardioTotalPlazo.textContent = fmtMoney2(r.reducirPlazo.total);
 
-  const msg = `Hola Yehison, simulé el plan "Autoahorro con inicial" (ingreso en la cuota 30) para un certificado de ${fmtPrice(row.cert)} con inicial de ${fmtMoney2(entradaCliente)}. Me sale una cuota de ${fmtMoney2(r.reducirCuota.cuota)}/mes reduciendo cuota. ¿Me ayudas a confirmar con el cronograma oficial?`;
+  const msg = `Hola Yehison, simulé el plan "Entra con tu inicial" (ingreso en la cuota 30) para un certificado de ${fmtPrice(row.cert)} con inicial de ${fmtMoney2(entradaCliente)}. Me sale una cuota de ${fmtMoney2(r.reducirCuota.cuota)}/mes reduciendo cuota. ¿Me ayudas a confirmar con el cronograma oficial?`;
   el.tardioWhatsappBtn.href = `https://wa.me/51983311727?text=${encodeURIComponent(msg)}`;
 
   el.leadAutoInteres.value = `Autoahorro (ingreso cuota 30) — certificado ${fmtPrice(row.cert)}, inicial ${fmtMoney2(entradaCliente)}`;
   el.leadCuotaEstimada.value = fmtMoney2(r.reducirCuota.cuota) + '/mes';
 
-  trackEvent('calculate_quote', { plan: 'ingreso_tardio', certificado: row.cert, entrada: entradaCliente, cuota_reducida: r.reducirCuota.cuota });
-  el.calcResultTardio.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  if (!silent) trackEvent('calculate_quote', { plan: 'ingreso_tardio', certificado: row.cert, entrada: entradaCliente, cuota_reducida: r.reducirCuota.cuota });
+  if (!silent) el.calcResultTardio.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
 function calculateActive() {
@@ -304,6 +305,12 @@ function submitLeadForm(e) {
       if (el.leadError) el.leadError.classList.add('hidden');
     })
     .catch(() => {
+      // Respaldo: el cliente envía sus datos por WhatsApp para no perder el lead
+      const waBtn = document.getElementById('leadErrorWa');
+      if (waBtn) {
+        const msg = `Hola Yehison, soy ${data.get('nombre') || ''} (cel. ${data.get('celular') || ''}). Me interesa: ${data.get('auto_interes') || 'financiar un auto'}${data.get('cuota_estimada') ? ', cuota estimada ' + data.get('cuota_estimada') : ''}. ¿Me contactas?`;
+        waBtn.href = `https://wa.me/51983311727?text=${encodeURIComponent(msg)}`;
+      }
       if (el.leadError) el.leadError.classList.remove('hidden');
       submitBtn.disabled = false;
       submitBtn.textContent = 'Enviar mis datos';
@@ -316,6 +323,7 @@ function init() {
   updateFavCount();
   applyFilters();
   bindEvents();
+  calculatePronto(true);
   const filters = document.querySelector('.search-filters');
   if (filters && window.matchMedia) {
     const mq = window.matchMedia('(min-width: 801px)');
@@ -397,7 +405,7 @@ function bindEvents() {
     el.filterBrand.value = '';
     el.filterCapacity.value = '';
     el.filterTag.value = '';
-    el.sortBy.value = 'brand';
+    el.sortBy.value = 'popular';
     el.priceMin.value = '';
     el.priceMax.value = '';
     applyFilters();
@@ -432,6 +440,10 @@ function bindEvents() {
   el.calcTabPronto.addEventListener('click', () => switchCalcTab('pronto'));
   el.calcTabTardio.addEventListener('click', () => switchCalcTab('tardio'));
   el.calcBtn.addEventListener('click', calculateActive);
+  // Recalcular al cambiar el valor o la inicial, sin tener que pulsar "Calcular"
+  el.calcCertPronto.addEventListener('change', calculatePronto);
+  el.calcCertTardio.addEventListener('change', calculateTardio);
+  el.calcEntradaTardio.addEventListener('change', calculateTardio);
   el.calcShowLeadForm.addEventListener('click', () => {
     el.leadForm.classList.remove('hidden');
     el.leadNombre.focus();
@@ -497,6 +509,8 @@ function handleHashChange() {
   }
 }
 
+const TOP_BRANDS = ['Toyota', 'KIA', 'Hyundai', 'Changan', 'Jetour', 'Chevrolet', 'Geely', 'Ford', 'JAC', 'Chery'];
+
 function applyFilters() {
   const text = el.searchText.value.trim().toLowerCase();
   const cat = el.filterCategory.value;
@@ -525,6 +539,11 @@ function applyFilters() {
     state.filteredCars.sort((a, b) => (a.priceFrom ?? Infinity) - (b.priceFrom ?? Infinity));
   } else if (sort === 'price-desc') {
     state.filteredCars.sort((a, b) => (b.priceFrom ?? -Infinity) - (a.priceFrom ?? -Infinity));
+  } else if (sort === 'popular') {
+    // Más vendidos: primero los de alta demanda, luego por ranking de marca (AAP) y precio
+    const rank = b => { const i = TOP_BRANDS.indexOf(b); return i === -1 ? 99 : i; };
+    const hot = c => ((c.tags || []).includes('alta-demanda') ? 0 : 1);
+    state.filteredCars.sort((a, b) => hot(a) - hot(b) || rank(a.brand) - rank(b.brand) || (a.priceFrom ?? Infinity) - (b.priceFrom ?? Infinity));
   } else {
     state.filteredCars.sort((a, b) => a.brand.localeCompare(b.brand) || a.model.localeCompare(b.model));
   }
@@ -792,7 +811,7 @@ function renderDetailModal(id) {
 
     <div class="detail-actions">
       <a class="video-link" href="${youtubeSearchUrl(car)}" target="_blank" rel="noopener">▶ Ver videos en YouTube</a>
-      <a class="btn-call" href="tel:+51931892164">Llámame al 931 892 164</a>
+      <a class="btn-call" href="tel:+51983311727">Llamar al 983 311 727</a>
       <a class="whatsapp-link icon-link" href="${whatsappUrl(car)}" target="_blank" rel="noopener" aria-label="Enviar un mensaje a Yehison sobre este auto" title="Enviar un mensaje"><svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.4-.3Z"/></svg></a>
       <button type="button" class="btn-secondary" id="calcFromDetailBtn">📊 Simular cuota</button>
       <button type="button" class="detail-fav-btn${state.favoriteIds.has(car.id) ? ' is-fav' : ''}" id="detailFavBtn">${state.favoriteIds.has(car.id) ? '♥ En favoritos' : '♡ Guardar en favoritos'}</button>
@@ -840,7 +859,7 @@ function openCompareModal() {
     { label: 'Airbags', render: c => c.specs?.airbags || '—' },
     { label: 'Plan Maquilink', render: c => c.planEligible ? `Sí (${c.planTypes || ''})` : 'No' },
     { label: 'Video', render: c => `<a class="video-link" href="${youtubeSearchUrl(c)}" target="_blank" rel="noopener">▶ Ver</a>` },
-    { label: 'Consultar', render: c => `<a class="btn-call btn-call-sm" href="tel:+51931892164">Llámame</a> <a class="whatsapp-link icon-link" href="${whatsappUrl(c)}" target="_blank" rel="noopener" aria-label="Enviar un mensaje sobre el ${c.brand} ${c.model}" title="Enviar un mensaje"><svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.4-.3Z"/></svg></a>` },
+    { label: 'Consultar', render: c => `<a class="btn-call btn-call-sm" href="tel:+51983311727">Llámame</a> <a class="whatsapp-link icon-link" href="${whatsappUrl(c)}" target="_blank" rel="noopener" aria-label="Enviar un mensaje sobre el ${c.brand} ${c.model}" title="Enviar un mensaje"><svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.4-.3Z"/></svg></a>` },
   ];
 
   const headerCells = cars.map(c => `<th>${c.brand} ${c.model}</th>`).join('');
