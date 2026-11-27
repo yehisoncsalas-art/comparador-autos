@@ -407,3 +407,11 @@ select:focus,input:focus{border-color:var(--c-gold)}
 .btn-wa:hover{background:#3BE07A;border-color:#3BE07A;color:#06310F}
 .btn-wa .ico{width:20px;height:20px}
 .lead-error .btn-wa,.lead-error a.btn-wa{margin-top:10px;color:#06310F}
+
+/* Guías: ruta de navegación y tablas de datos clave */
+.crumbs{font-size:.875rem;color:var(--c-text-2);margin:0 0 14px}
+.crumbs a{color:var(--c-text-2);text-decoration:none}
+.crumbs a:hover{color:var(--c-gold)}
+.article .content-table th[scope="row"]{text-align:left;white-space:nowrap;color:var(--c-text)}
+.article .content-table{width:100%;overflow-x:auto}
+@media (max-width:600px){.article .content-table{display:block}.article .content-table th[scope="row"]{white-space:normal}}
