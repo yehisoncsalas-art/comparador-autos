@@ -1,5 +1,6 @@
 // Comparador de Autos — lógica de la app (vanilla JS, sin dependencias)
-// Catálogo: 284 modelos / 1345 versiones, referencial.
+// Catálogo: 284 modelos / 1345 versiones, fuente: catálogo público de referencia.
+// Rediseño visual: solo cambian textos visibles; tablas, cifras y fórmulas se mantienen.
 // build: 2026-11-04b
 
 const FAVORITES_KEY = 'yc_favorites';
@@ -116,7 +117,7 @@ function updateFavCount() {
   el.favCount.textContent = state.favoriteIds.size;
 }
 
-// Tarifario de fondo colectivo, con IGV. Fuente: tabla vigente del asesor.
+// Tarifario vigente, con IGV. Fuente: tabla vigente del asesor.
 // Auto Pronto (adelanto de 24 cuotas) — 60 meses
 const AUTO_PRONTO = [
   { cert: 12000, ins: 566.40, cuota: 259.00 },
@@ -740,7 +741,7 @@ function renderDetailModal(id) {
   ` : '';
 
   const planHtml = car.planEligible
-    ? `<span class="plan-badge">✓ Disponible en fondo colectivo (${car.planTypes || 'consultar'})</span>`
+    ? `<span class="plan-badge">✓ Disponible con Maquilink (${car.planTypes || 'consultar'})</span>`
     : '';
 
   const capHtml = capacityLabel(car)
@@ -791,7 +792,8 @@ function renderDetailModal(id) {
 
     <div class="detail-actions">
       <a class="video-link" href="${youtubeSearchUrl(car)}" target="_blank" rel="noopener">▶ Ver videos en YouTube</a>
-      <a class="whatsapp-link" href="${whatsappUrl(car)}" target="_blank" rel="noopener">💬 Escríbeme</a>
+      <a class="btn-call" href="tel:+51931892164">Llámame al 931 892 164</a>
+      <a class="whatsapp-link icon-link" href="${whatsappUrl(car)}" target="_blank" rel="noopener" aria-label="Enviar un mensaje a Yehison sobre este auto" title="Enviar un mensaje"><svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.4-.3Z"/></svg></a>
       <button type="button" class="btn-secondary" id="calcFromDetailBtn">📊 Simular cuota</button>
       <button type="button" class="detail-fav-btn${state.favoriteIds.has(car.id) ? ' is-fav' : ''}" id="detailFavBtn">${state.favoriteIds.has(car.id) ? '♥ En favoritos' : '♡ Guardar en favoritos'}</button>
       ${navigator.share ? '<button type="button" class="copy-link-btn" id="shareDetailBtn">📤 Compartir</button>' : ''}
@@ -800,7 +802,7 @@ function renderDetailModal(id) {
 
     ${similarHtml}
 
-    <p class="source-note">Precios y modelos referenciales, sujetos a cambio. Consulta con tu asesor.</p>
+    <p class="source-note">Catálogo referencial. Precios, modelos y versiones son solo referenciales y pueden cambiar sin previo aviso. El fondo colectivo no vende vehículos directamente: comercializa certificados de ahorro programado que permiten acceder a un vehículo. Consulta siempre con tu asesor antes de decidir.</p>
   `;
 
   el.detailModal.classList.remove('hidden');
@@ -836,9 +838,9 @@ function openCompareModal() {
     { label: 'Consumo', render: c => c.specs?.consumption ? c.specs.consumption + ' L/100km' : '—' },
     { label: 'Baúl', render: c => c.specs?.trunk ? c.specs.trunk + ' L' : '—' },
     { label: 'Airbags', render: c => c.specs?.airbags || '—' },
-    { label: 'Fondo colectivo', render: c => c.planEligible ? `Sí (${c.planTypes || ''})` : 'No' },
+    { label: 'Plan Maquilink', render: c => c.planEligible ? `Sí (${c.planTypes || ''})` : 'No' },
     { label: 'Video', render: c => `<a class="video-link" href="${youtubeSearchUrl(c)}" target="_blank" rel="noopener">▶ Ver</a>` },
-    { label: 'Consultar', render: c => `<a class="whatsapp-link" href="${whatsappUrl(c)}" target="_blank" rel="noopener">💬 Escríbeme</a>` },
+    { label: 'Consultar', render: c => `<a class="btn-call btn-call-sm" href="tel:+51931892164">Llámame</a> <a class="whatsapp-link icon-link" href="${whatsappUrl(c)}" target="_blank" rel="noopener" aria-label="Enviar un mensaje sobre el ${c.brand} ${c.model}" title="Enviar un mensaje"><svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.4-.3Z"/></svg></a>` },
   ];
 
   const headerCells = cars.map(c => `<th>${c.brand} ${c.model}</th>`).join('');

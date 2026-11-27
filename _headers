@@ -8,10 +8,22 @@
 /og-image.jpg
   Cache-Control: public, max-age=86400
 
+/img/*
+  Cache-Control: public, max-age=604800
+
+/fonts/*
+  Cache-Control: public, max-age=2592000
+
 /favicon.ico
   Cache-Control: public, max-age=604800
 
 /favicon.svg
+  Cache-Control: public, max-age=604800
+
+/favicon-32.png
+  Cache-Control: public, max-age=604800
+
+/apple-touch-icon.png
   Cache-Control: public, max-age=604800
 
 /css/*

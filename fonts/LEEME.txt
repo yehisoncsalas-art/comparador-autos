@@ -1,0 +1,1 @@
+Montserrat e Inter: SIL Open Font License 1.1 (Google Fonts). Subconjunto latino en WOFF2 generado con pyftsubset.
