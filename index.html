@@ -37,7 +37,7 @@
   "description": "Asesor de financiamiento vehicular con fondo colectivo en Arequipa, Perú. Si el banco no aprueba el crédito, revisa el caso y explica cómo financiar un auto nuevo con fondo colectivo.",
   "url": "https://yehisoncerpa.pages.dev/",
   "image": "https://yehisoncerpa.pages.dev/og-image.jpg",
-  "telephone": "+51931892164",
+  "telephone": "+51983311727",
   "areaServed": {
     "@type": "City",
     "name": "Arequipa"
@@ -75,7 +75,7 @@
       "name": "¿Qué pasa si no califico para un crédito bancario?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "El financiamiento con fondo colectivo no exige la evaluación crediticia bancaria tradicional. Funciona con cuotas mensuales y la adjudicación del vehículo. Yehison Cerpa te explica si esta opción se ajusta a tu caso."
+        "text": "Con fondo colectivo no revisan tu historial crediticio ni tus deudas, así que una mancha o un ingreso informal no te cierran la puerta. Funciona con cuotas mensuales y la adjudicación del vehículo. Yehison Cerpa te explica si esta opción se ajusta a tu caso."
       }
     },
     {
@@ -99,7 +99,7 @@
       "name": "¿Cómo contacto a Yehison Cerpa?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Puedes escribirme al 983 311 727, llamarme al 931 892 164, o contactarme por Facebook y TikTok como Yehison Cerpa, en Arequipa, Perú."
+        "text": "Puedes escribirme por WhatsApp o llamarme al 983 311 727, o contactarme por Facebook y TikTok como Yehison Cerpa, en Arequipa, Perú."
       }
     }
   ]
@@ -116,8 +116,8 @@
           <p class="subtitle">Financiamiento vehicular con fondo colectivo en Arequipa</p>
         </div>
         <div class="contact-buttons">
-          <a class="contact-btn call" href="tel:+51931892164">Llámame al 931 892 164</a>
-          <a class="contact-btn whatsapp" href="https://wa.me/51983311727?text=Hola%20Yehison%2C%20quiero%20informaci%C3%B3n%20sobre%20un%20veh%C3%ADculo" target="_blank" rel="noopener">💬 Escríbeme</a>
+          <a class="contact-btn whatsapp" href="https://wa.me/51983311727?text=Hola%20Yehison%2C%20quiero%20informaci%C3%B3n%20sobre%20un%20veh%C3%ADculo" target="_blank" rel="noopener">💬 WhatsApp 983 311 727</a>
+          <a class="contact-btn call" href="tel:+51983311727">📞 Llamar</a>
           <a class="contact-btn facebook" href="https://web.facebook.com/profile.php?id=61595129260764" target="_blank" rel="noopener">📘 Facebook</a>
           <a class="contact-btn tiktok" href="https://www.tiktok.com/@yehisoncerpa.finanzas" target="_blank" rel="noopener">🎵 TikTok</a>
         </div>
@@ -140,7 +140,15 @@
     <section class="hero">
       <h2 class="hero-title">Financia tu auto con fondo colectivo</h2>
       <p class="hero-lema">¿El banco te dijo NO? Yo busco tu SÍ.</p>
-      <a class="contact-btn call hero-cta" href="tel:+51931892164">Llámame al 931 892 164</a>
+      <ul class="hero-points">
+        <li><strong>No revisan tu historial ni tus deudas.</strong> El fondo colectivo no pasa por la evaluación bancaria: si tienes una mancha o tu ingreso es de aplicativo, igual puedes entrar.</li>
+        <li><strong>Te llevas tu auto con el adelanto.</strong> Adelantas 24 cuotas (alrededor del 55% del valor) y pagas el resto en 36 cuotas.</li>
+        <li><strong>Regulado por la SMV</strong> y con documentación simple.</li>
+      </ul>
+      <div class="hero-ctas">
+        <a class="contact-btn whatsapp hero-cta" href="https://wa.me/51983311727?text=Hola%20Yehison%2C%20el%20banco%20no%20me%20aprob%C3%B3%20y%20quiero%20ver%20mis%20opciones%20para%20un%20auto" target="_blank" rel="noopener">💬 Escríbeme por WhatsApp</a>
+        <a class="contact-btn call hero-cta" href="#calcSection">🧮 Simula tu cuota</a>
+      </div>
     </section>
     <!-- Buscador -->
     <section class="search-panel">
@@ -167,6 +175,7 @@
           <option value="mejor-precio-calidad">💰 Mejor precio-calidad</option>
         </select>
         <select id="sortBy">
+          <option value="popular">Ordenar: Más vendidos</option>
           <option value="brand">Ordenar: Marca A-Z</option>
           <option value="price-asc">Ordenar: Precio menor a mayor</option>
           <option value="price-desc">Ordenar: Precio mayor a menor</option>
@@ -211,8 +220,8 @@
       <p class="calc-subtitle">Cálculo referencial según el tarifario vigente de Maquisistema — sujeto a evaluación, contrato y cronograma oficial. Para tu cotización exacta, escríbeme.</p>
 
       <div class="calc-tabs" role="tablist">
-        <button type="button" class="calc-tab active" id="calcTabPronto" data-plan="pronto">🚗 Adelanto de 24 cuotas<span class="calc-tab-sub">Entrega referencial según cronograma oficial</span></button>
-        <button type="button" class="calc-tab" id="calcTabTardio" data-plan="tardio">💰 Autoahorro con inicial<span class="calc-tab-sub">Ingresas en la cuota 30 · Plan de 50 cuotas</span></button>
+        <button type="button" class="calc-tab active" id="calcTabPronto" data-plan="pronto">🚗 Paga ~55% y llévate tu auto<span class="calc-tab-sub">Adelantas 24 cuotas · quedan 36</span></button>
+        <button type="button" class="calc-tab" id="calcTabTardio" data-plan="tardio">💰 Entra con tu inicial<span class="calc-tab-sub">Ingresas en la cuota 30 · Plan de 50 cuotas</span></button>
       </div>
 
       <!-- Opción: Adelanto de 24 cuotas -->
@@ -252,7 +261,7 @@
         <p class="calc-disclaimer">La cuota incluye capital y administración con IGV. El desgravamen (0.05% mensual del certificado) y el seguro vehicular van aparte. Monto sobre el certificado inmediatamente superior al valor de tu vehículo.</p>
 
         <div class="calc-cta-row">
-          <a id="prontoWhatsappBtn" class="whatsapp-link" href="#" target="_blank" rel="noopener">💬 Escríbeme</a>
+          <a id="prontoWhatsappBtn" class="whatsapp-link" href="#" target="_blank" rel="noopener">💬 Envíame esta simulación por WhatsApp</a>
           <button type="button" id="calcShowLeadForm" class="btn-secondary">📋 Prefiero que me contacten</button>
         </div>
       </div>
@@ -281,7 +290,7 @@
           <p class="calc-disclaimer">"Reducir cuota" suele bajar el total a pagar respecto de reducir el plazo — por eso lo recomendamos por defecto. Obligación total y remate calculados sobre el certificado inmediatamente superior al valor de tu vehículo, con administración 18.3% + IGV. Cifras referenciales — confirma siempre con el cronograma oficial de Maquisistema.</p>
 
           <div class="calc-cta-row">
-            <a id="tardioWhatsappBtn" class="whatsapp-link" href="#" target="_blank" rel="noopener">💬 Escríbeme</a>
+            <a id="tardioWhatsappBtn" class="whatsapp-link" href="#" target="_blank" rel="noopener">💬 Envíame esta simulación por WhatsApp</a>
             <button type="button" class="btn-secondary calc-show-lead-form-tardio">📋 Prefiero que me contacten</button>
           </div>
         </div>
@@ -303,7 +312,7 @@
       </form>
 
       <p id="leadSuccess" class="lead-success hidden">✓ ¡Gracias! Yehison Cerpa se pondrá en contacto contigo pronto.</p>
-      <p id="leadError" class="lead-error hidden">No pude registrar tus datos en este momento. Para no perder tu consulta, <a href="tel:+51931892164">Llámame al 931 892 164</a>.</p>
+      <p id="leadError" class="lead-error hidden">No pude registrar tus datos por aquí. Envíamelos por WhatsApp para no perder tu consulta: <a id="leadErrorWa" class="whatsapp-link" href="https://wa.me/51983311727" target="_blank" rel="noopener">💬 Enviar por WhatsApp</a></p>
     </section>
 
     
@@ -316,7 +325,7 @@
       <p>El catálogo de Yehison Cerpa incluye 284 modelos y 1,345 versiones de 30 marcas: Toyota, Kia, Honda, Mazda, Nissan, Suzuki, Chevrolet, BYD, Changan, Chery, GWM/Haval, JAC, Jetour, MG, Mitsubishi, Omoda, Peugeot, Renault, Subaru, Volkswagen y más, con precios de referencia en dólares (USD) y filtros por marca, tipo de vehículo (SUV, Sedán, Pickup, Van, Eléctrico) y precio.</p>
 
       <h2>¿Cuánto cuesta un auto nuevo en Arequipa?</h2>
-      <p>Los precios varían según marca y versión: desde modelos económicos de alrededor de $12,000 USD hasta SUVs y eléctricos premium. Cada ficha del catálogo muestra el precio de lista, el precio final con promociones vigentes, y las versiones disponibles por año y motorización. Llámame al 931 892 164 o escríbeme para una cotización personalizada y la mejor forma de financiarlo.</p>
+      <p>Los precios varían según marca y versión: desde modelos económicos de alrededor de $12,000 USD hasta SUVs y eléctricos premium. Cada ficha del catálogo muestra el precio de lista, el precio final con promociones vigentes, y las versiones disponibles por año y motorización. Escríbeme por WhatsApp al 983 311 727 para una cotización personalizada y la mejor forma de financiarlo.</p>
     </section>
 
   </main>
@@ -331,7 +340,7 @@
 
     <details class="faq-item">
       <summary>¿Qué pasa si no califico para un crédito bancario?</summary>
-      <p>El financiamiento con fondo colectivo no exige la evaluación crediticia bancaria tradicional. Funciona con cuotas mensuales y la adjudicación del vehículo. Te explico si esta opción se ajusta a tu caso.</p>
+      <p>Con fondo colectivo no revisan tu historial crediticio ni tus deudas, así que una mancha o un ingreso informal no te cierran la puerta. Funciona con cuotas mensuales y la adjudicación del vehículo. Te explico si esta opción se ajusta a tu caso.</p>
     </details>
 
     <details class="faq-item">
@@ -346,7 +355,7 @@
 
     <details class="faq-item">
       <summary>¿Cómo contacto a Yehison Cerpa?</summary>
-      <p>Puedes escribirme al 983 311 727, llamarme al 931 892 164, o contactarme por Facebook y TikTok como Yehison Cerpa, en Arequipa, Perú.</p>
+      <p>Puedes escribirme por WhatsApp o llamarme al 983 311 727, o contactarme por Facebook y TikTok como Yehison Cerpa, en Arequipa, Perú.</p>
     </details>
   </section>
 
@@ -445,8 +454,7 @@
   <footer class="footer">
     <p class="footer-brand">Yehison Cerpa</p>
     <p class="footer-contacts">
-      📱 Personal: <a href="tel:+51931892164">931 892 164</a> &nbsp;·&nbsp;
-      💬 Escríbeme: <a href="https://wa.me/51983311727" target="_blank" rel="noopener">983 311 727</a> &nbsp;·&nbsp;
+      📱 WhatsApp y llamadas: <a href="https://wa.me/51983311727" target="_blank" rel="noopener">983 311 727</a> &nbsp;·&nbsp;
       📘 <a href="https://web.facebook.com/profile.php?id=61595129260764" target="_blank" rel="noopener">Facebook</a> &nbsp;·&nbsp;
       🎵 <a href="https://www.tiktok.com/@yehisoncerpa.finanzas" target="_blank" rel="noopener">TikTok</a> &nbsp;·&nbsp;
       💼 <a href="https://www.linkedin.com/in/yehisoncerpa/" target="_blank" rel="noopener">LinkedIn</a>

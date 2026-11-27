@@ -744,3 +744,31 @@ body { padding-bottom: 88px; }
   .car-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .car-card img { height: 110px; }
 }
+
+/* v3: argumentos del fondo colectivo y botones del inicio */
+.hero-points {
+  list-style: none;
+  margin: 0 0 18px;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+  max-width: 760px;
+}
+.hero-points li {
+  position: relative;
+  padding-left: 26px;
+  color: var(--text-dim);
+  line-height: 1.45;
+}
+.hero-points li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #25d366;
+  font-weight: 700;
+}
+.hero-points strong { color: var(--text); }
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 10px; }
+.hero-cta.whatsapp { background: #25d366 !important; color: #06310f !important; }
+.hero-cta.call { background: var(--panel-2) !important; color: var(--text) !important; border: 1px solid var(--border) !important; }
+.lead-error .whatsapp-link { display: inline-block; margin-top: 8px; }
