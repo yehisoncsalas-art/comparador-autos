@@ -1,4 +1,4 @@
-// build: 2026-11-27b (precios nov 2026)
+// build: 2026-11-28 (Hyundai lista nov 2026)
 const CARS = [
   {
     "id": "byd-atto-8",
@@ -8536,7 +8536,7 @@ const CARS = [
         "fuel": "Híbrido",
         "traction": "4x2",
         "bodyType": "SUV",
-        "priceList": 60990,
+        "priceList": 57990,
         "priceFinal": 56990,
         "promo": "",
         "featured": false
@@ -8549,7 +8549,7 @@ const CARS = [
         "fuel": "Híbrido",
         "traction": "4x4",
         "bodyType": "SUV",
-        "priceList": 67990,
+        "priceList": 64990,
         "priceFinal": 63990,
         "promo": "",
         "featured": false
@@ -8562,7 +8562,7 @@ const CARS = [
         "fuel": "Híbrido",
         "traction": "4x4",
         "bodyType": "SUV",
-        "priceList": 78990,
+        "priceList": 75990,
         "priceFinal": 74990,
         "promo": "",
         "featured": false
@@ -8601,7 +8601,7 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "4x2",
         "bodyType": "SUV",
-        "priceList": 23990,
+        "priceList": 21990,
         "priceFinal": 20990,
         "promo": "",
         "featured": false
@@ -8614,7 +8614,7 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "4x2",
         "bodyType": "SUV",
-        "priceList": 24990,
+        "priceList": 22990,
         "priceFinal": 21990,
         "promo": "",
         "featured": false
@@ -8627,8 +8627,8 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "4x2",
         "bodyType": "SUV",
-        "priceList": 26990,
-        "priceFinal": 23990,
+        "priceList": 23990,
+        "priceFinal": 22990,
         "promo": "",
         "featured": false
       },
@@ -8640,7 +8640,46 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "4x2",
         "bodyType": "SUV",
-        "priceList": 27990,
+        "priceList": 25990,
+        "priceFinal": 24990,
+        "promo": "",
+        "featured": false
+      },
+      {
+        "trim": "SU2i 1.5 GL 2WD MT COMFORT",
+        "year": "2026",
+        "engine": "1.5L",
+        "transmission": "Manual",
+        "fuel": "Gasolina",
+        "traction": "4x2",
+        "bodyType": "SUV",
+        "priceList": 21990,
+        "priceFinal": 20990,
+        "promo": "",
+        "featured": false
+      },
+      {
+        "trim": "SU2i 1.5 GL 2WD IVT COMFORT",
+        "year": "2026",
+        "engine": "1.5L",
+        "transmission": "Automático",
+        "fuel": "Gasolina",
+        "traction": "4x2",
+        "bodyType": "SUV",
+        "priceList": 22990,
+        "priceFinal": 21990,
+        "promo": "",
+        "featured": false
+      },
+      {
+        "trim": "SU2i 1.5 GL 2WD IVT DESIGN",
+        "year": "2026",
+        "engine": "1.5L",
+        "transmission": "Automático",
+        "fuel": "Gasolina",
+        "traction": "4x2",
+        "bodyType": "SUV",
+        "priceList": 25990,
         "priceFinal": 24990,
         "promo": "",
         "featured": false
@@ -8679,7 +8718,7 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "",
         "bodyType": "SUV",
-        "priceList": 17990,
+        "priceList": 15990,
         "priceFinal": 14990,
         "promo": "",
         "featured": false
@@ -8692,7 +8731,7 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "",
         "bodyType": "SUV",
-        "priceList": 18990,
+        "priceList": 16990,
         "priceFinal": 15990,
         "promo": "",
         "featured": false
@@ -8731,7 +8770,7 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "",
         "bodyType": "SUV",
-        "priceList": 26690,
+        "priceList": 24690,
         "priceFinal": 23690,
         "promo": "",
         "featured": false
@@ -8744,8 +8783,8 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "",
         "bodyType": "SUV",
-        "priceList": 29690,
-        "priceFinal": 26690,
+        "priceList": 27490,
+        "priceFinal": 26490,
         "promo": "",
         "featured": false
       },
@@ -8757,8 +8796,8 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "",
         "bodyType": "SUV",
-        "priceList": 29490,
-        "priceFinal": 26490,
+        "priceList": 28490,
+        "priceFinal": 27490,
         "promo": "",
         "featured": false
       },
@@ -8770,8 +8809,8 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "",
         "bodyType": "SUV",
-        "priceList": 31990,
-        "priceFinal": 28990,
+        "priceList": 30990,
+        "priceFinal": 29990,
         "promo": "",
         "featured": false
       }
@@ -8809,8 +8848,8 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "",
         "bodyType": "Hatchback",
-        "priceList": 13490,
-        "priceFinal": 11490,
+        "priceList": 12990,
+        "priceFinal": 11990,
         "promo": "",
         "featured": false
       },
@@ -8822,8 +8861,8 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "",
         "bodyType": "Hatchback",
-        "priceList": 13990,
-        "priceFinal": 11990,
+        "priceList": 13490,
+        "priceFinal": 12490,
         "promo": "",
         "featured": false
       },
@@ -8835,7 +8874,7 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "",
         "bodyType": "Hatchback",
-        "priceList": 15490,
+        "priceList": 14490,
         "priceFinal": 13490,
         "promo": "",
         "featured": false
@@ -8848,8 +8887,8 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "",
         "bodyType": "Hatchback",
-        "priceList": 16990,
-        "priceFinal": 14990,
+        "priceList": 16490,
+        "priceFinal": 15490,
         "promo": "",
         "featured": false
       }
@@ -8870,7 +8909,7 @@ const CARS = [
     ],
     "planEligible": true,
     "planTypes": "Todos",
-    "priceFrom": 11490,
+    "priceFrom": 11990,
     "tags": [
       "mejor-precio-calidad"
     ]
@@ -8889,7 +8928,7 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "",
         "bodyType": "Sedán",
-        "priceList": 13990,
+        "priceList": 12990,
         "priceFinal": 11990,
         "promo": "",
         "featured": false
@@ -8902,7 +8941,7 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "",
         "bodyType": "Sedán",
-        "priceList": 14990,
+        "priceList": 13990,
         "priceFinal": 12990,
         "promo": "",
         "featured": false
@@ -8915,7 +8954,7 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "",
         "bodyType": "Sedán",
-        "priceList": 16990,
+        "priceList": 15990,
         "priceFinal": 14990,
         "promo": "",
         "featured": false
@@ -8956,7 +8995,7 @@ const CARS = [
         "fuel": "Diésel",
         "traction": "",
         "bodyType": "Camión",
-        "priceList": 23490,
+        "priceList": 21990,
         "priceFinal": 20990,
         "promo": "",
         "featured": false
@@ -8996,8 +9035,8 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "",
         "bodyType": "Hatchback",
-        "priceList": 18190,
-        "priceFinal": 16490,
+        "priceList": 16690,
+        "priceFinal": 16690,
         "promo": "",
         "featured": false
       },
@@ -9009,8 +9048,8 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "",
         "bodyType": "Hatchback",
-        "priceList": 19690,
-        "priceFinal": 17990,
+        "priceList": 18190,
+        "priceFinal": 18190,
         "promo": "",
         "featured": false
       },
@@ -9022,7 +9061,7 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "",
         "bodyType": "Hatchback",
-        "priceList": 20990,
+        "priceList": 19290,
         "priceFinal": 19290,
         "promo": "",
         "featured": false
@@ -9044,7 +9083,7 @@ const CARS = [
     ],
     "planEligible": true,
     "planTypes": "Todos",
-    "priceFrom": 16490
+    "priceFrom": 16690
   },
   {
     "id": "hyundai-new-accent",
@@ -9060,7 +9099,7 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "",
         "bodyType": "Sedán",
-        "priceList": 19290,
+        "priceList": 17290,
         "priceFinal": 17290,
         "promo": "",
         "featured": false
@@ -9073,8 +9112,8 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "",
         "bodyType": "Sedán",
-        "priceList": 20690,
-        "priceFinal": 18490,
+        "priceList": 18490,
+        "priceFinal": 18290,
         "promo": "",
         "featured": false
       },
@@ -9086,7 +9125,7 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "",
         "bodyType": "Sedán",
-        "priceList": 21790,
+        "priceList": 19790,
         "priceFinal": 19490,
         "promo": "",
         "featured": false
@@ -9124,7 +9163,7 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "4x2",
         "bodyType": "SUV",
-        "priceList": 43990,
+        "priceList": 40990,
         "priceFinal": 39990,
         "promo": "",
         "featured": false
@@ -9137,7 +9176,7 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "4x2",
         "bodyType": "SUV",
-        "priceList": 49990,
+        "priceList": 46990,
         "priceFinal": 45990,
         "promo": "",
         "featured": false
@@ -9176,8 +9215,8 @@ const CARS = [
         "fuel": "Híbrido",
         "traction": "4x4",
         "bodyType": "SUV",
-        "priceList": 56990,
-        "priceFinal": 52990,
+        "priceList": 54990,
+        "priceFinal": 53990,
         "promo": "",
         "featured": false
       }
@@ -9198,7 +9237,7 @@ const CARS = [
     ],
     "planEligible": true,
     "planTypes": "Todos",
-    "priceFrom": 52990,
+    "priceFrom": 53990,
     "capacity": "7"
   },
   {
@@ -9215,7 +9254,7 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "",
         "bodyType": "Van",
-        "priceList": 46990,
+        "priceList": 44990,
         "priceFinal": 43990,
         "promo": "",
         "featured": false
@@ -9228,7 +9267,7 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "",
         "bodyType": "Van",
-        "priceList": 38990,
+        "priceList": 36990,
         "priceFinal": 35990,
         "promo": "",
         "featured": false
@@ -9267,7 +9306,7 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "4x2",
         "bodyType": "SUV",
-        "priceList": 29990,
+        "priceList": 27490,
         "priceFinal": 26490,
         "promo": "",
         "featured": false
@@ -9280,7 +9319,7 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "4x2",
         "bodyType": "SUV",
-        "priceList": 30490,
+        "priceList": 27990,
         "priceFinal": 26990,
         "promo": "",
         "featured": false
@@ -9293,7 +9332,7 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "4x2",
         "bodyType": "SUV",
-        "priceList": 35390,
+        "priceList": 32890,
         "priceFinal": 31890,
         "promo": "",
         "featured": false
@@ -9306,7 +9345,7 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "4x2",
         "bodyType": "SUV",
-        "priceList": 37390,
+        "priceList": 34890,
         "priceFinal": 33890,
         "promo": "",
         "featured": false
@@ -9345,8 +9384,8 @@ const CARS = [
         "fuel": "Híbrido",
         "traction": "4x2",
         "bodyType": "SUV",
-        "priceList": 43490,
-        "priceFinal": 39990,
+        "priceList": 42990,
+        "priceFinal": 41990,
         "promo": "",
         "featured": false
       }
@@ -9367,7 +9406,7 @@ const CARS = [
     ],
     "planEligible": true,
     "planTypes": "Todos",
-    "priceFrom": 39990,
+    "priceFrom": 41990,
     "capacity": "5"
   },
   {
@@ -9384,7 +9423,7 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "",
         "bodyType": "SUV",
-        "priceList": 21490,
+        "priceList": 19490,
         "priceFinal": 18490,
         "promo": "",
         "featured": false
@@ -9397,7 +9436,7 @@ const CARS = [
         "fuel": "Gasolina",
         "traction": "",
         "bodyType": "SUV",
-        "priceList": 23490,
+        "priceList": 21490,
         "priceFinal": 20490,
         "promo": "",
         "featured": false
